@@ -2,6 +2,8 @@
 
 This is intended to be a playground for algorithms and eventually a neural network in the realm of the german game "Schafkopf".
 
+Since I am still pretty new to Rust it is also a way for me to better understand and learn the language.
+
 # Gameplay/UI
 
 There are two planned ways to play/run this game:
