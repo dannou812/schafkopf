@@ -26,6 +26,10 @@ impl Deck {
         return result;
     }
 
+    pub fn get_cards(&self) -> Vec<Card> {
+        self.cards.clone()
+    }
+
     //todo
     //pub fn get_hand(&self) -> Vec<Card> {}
 }
@@ -37,38 +41,38 @@ mod tests {
 
     fn full_deck_hardcoded() -> Vec<Card> {
         vec![
-            Card::new(Color::CLAMP, Symbol::SEVEN),
-            Card::new(Color::CLAMP, Symbol::EIGHT),
-            Card::new(Color::CLAMP, Symbol::NINE),
-            Card::new(Color::CLAMP, Symbol::TEN),
-            Card::new(Color::CLAMP, Symbol::A),
-            Card::new(Color::CLAMP, Symbol::U),
-            Card::new(Color::CLAMP, Symbol::O),
-            Card::new(Color::CLAMP, Symbol::K),
-            Card::new(Color::LEAF, Symbol::SEVEN),
-            Card::new(Color::LEAF, Symbol::EIGHT),
-            Card::new(Color::LEAF, Symbol::NINE),
-            Card::new(Color::LEAF, Symbol::TEN),
-            Card::new(Color::LEAF, Symbol::A),
-            Card::new(Color::LEAF, Symbol::U),
-            Card::new(Color::LEAF, Symbol::O),
-            Card::new(Color::LEAF, Symbol::K),
-            Card::new(Color::ACORN, Symbol::SEVEN),
-            Card::new(Color::ACORN, Symbol::EIGHT),
-            Card::new(Color::ACORN, Symbol::NINE),
-            Card::new(Color::ACORN, Symbol::TEN),
-            Card::new(Color::ACORN, Symbol::A),
-            Card::new(Color::ACORN, Symbol::U),
-            Card::new(Color::ACORN, Symbol::O),
-            Card::new(Color::ACORN, Symbol::K),
-            Card::new(Color::HEART, Symbol::SEVEN),
-            Card::new(Color::HEART, Symbol::EIGHT),
-            Card::new(Color::HEART, Symbol::NINE),
-            Card::new(Color::HEART, Symbol::TEN),
-            Card::new(Color::HEART, Symbol::A),
-            Card::new(Color::HEART, Symbol::U),
-            Card::new(Color::HEART, Symbol::O),
-            Card::new(Color::HEART, Symbol::K),
+            Card::new(Color::Clamp, Symbol::Seven),
+            Card::new(Color::Clamp, Symbol::Eight),
+            Card::new(Color::Clamp, Symbol::Nine),
+            Card::new(Color::Clamp, Symbol::Ten),
+            Card::new(Color::Clamp, Symbol::A),
+            Card::new(Color::Clamp, Symbol::U),
+            Card::new(Color::Clamp, Symbol::O),
+            Card::new(Color::Clamp, Symbol::K),
+            Card::new(Color::Leaf, Symbol::Seven),
+            Card::new(Color::Leaf, Symbol::Eight),
+            Card::new(Color::Leaf, Symbol::Nine),
+            Card::new(Color::Leaf, Symbol::Ten),
+            Card::new(Color::Leaf, Symbol::A),
+            Card::new(Color::Leaf, Symbol::U),
+            Card::new(Color::Leaf, Symbol::O),
+            Card::new(Color::Leaf, Symbol::K),
+            Card::new(Color::Acorn, Symbol::Seven),
+            Card::new(Color::Acorn, Symbol::Eight),
+            Card::new(Color::Acorn, Symbol::Nine),
+            Card::new(Color::Acorn, Symbol::Ten),
+            Card::new(Color::Acorn, Symbol::A),
+            Card::new(Color::Acorn, Symbol::U),
+            Card::new(Color::Acorn, Symbol::O),
+            Card::new(Color::Acorn, Symbol::K),
+            Card::new(Color::Heart, Symbol::Seven),
+            Card::new(Color::Heart, Symbol::Eight),
+            Card::new(Color::Heart, Symbol::Nine),
+            Card::new(Color::Heart, Symbol::Ten),
+            Card::new(Color::Heart, Symbol::A),
+            Card::new(Color::Heart, Symbol::U),
+            Card::new(Color::Heart, Symbol::O),
+            Card::new(Color::Heart, Symbol::K),
         ]
     }
 

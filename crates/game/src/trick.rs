@@ -14,7 +14,7 @@ impl Trick {
         self.cards.push(card.clone())
     }
 
-    pub fn see_cards(self) -> Vec<Card>{
+    pub fn see_cards(self) -> Vec<Card> {
         Vec::from(self.cards)
     }
 }
