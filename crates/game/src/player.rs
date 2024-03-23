@@ -3,8 +3,8 @@ use crate::trick::Trick;
 
 pub trait Player {
     fn get_name() -> str;
-    fn request_move(current_trick: &Trick, legal_moves: &Vec<Card>) -> Card;
+    fn request_move(current_trick: &Trick, legal_moves: &[Card]) -> Card;
     fn advance_round(finished_trick: &Trick);
-    fn deal_hand(hand: &Vec<Card>);
+    fn deal_hand(hand: &[Card]);
     fn get_hand() -> Vec<Card>;
 }

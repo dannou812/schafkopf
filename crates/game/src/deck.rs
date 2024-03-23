@@ -23,7 +23,7 @@ impl Deck {
             }
         }
 
-        return result;
+        result
     }
 
     pub fn get_cards(&self) -> Vec<Card> {

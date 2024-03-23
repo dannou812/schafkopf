@@ -10,11 +10,11 @@ impl Trick {
         Trick { cards: Vec::new() }
     }
 
-    fn add_card(&mut self, mut card: &Card) {
+    fn add_card(&mut self, card: &Card) {
         self.cards.push(card.clone())
     }
 
     pub fn see_cards(self) -> Vec<Card> {
-        Vec::from(self.cards)
+        self.cards.clone()
     }
 }

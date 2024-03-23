@@ -1,3 +1,4 @@
+#[derive(Debug)]
 pub struct Card {
     color: Color,
     symbol: Symbol,
@@ -21,11 +22,11 @@ impl Card {
     }
 
     pub fn get_color(&self) -> Color {
-        self.color.clone()
+        self.color
     }
 
     pub fn get_symbol(&self) -> Symbol {
-        self.symbol.clone()
+        self.symbol
     }
 }
 
@@ -37,13 +38,13 @@ impl Clone for Card {
 
 impl PartialEq<Self> for Card {
     fn eq(&self, other: &Self) -> bool {
-        return self.color == other.color && self.symbol == other.symbol;
+        self.color == other.color && self.symbol == other.symbol
     }
 }
 
 impl Eq for Card {}
 
-#[derive(Copy, Clone, Eq, PartialEq)]
+#[derive(Copy, Clone, Eq, PartialEq, Debug)]
 pub enum Symbol {
     A,
     Ten,
@@ -70,7 +71,7 @@ impl Symbol {
     }
 }
 
-#[derive(Copy, Clone, Eq, PartialEq)]
+#[derive(Copy, Clone, Eq, PartialEq, Debug)]
 pub enum Color {
     Acorn,
     Leaf,
@@ -84,15 +85,23 @@ impl Color {
     }
 }
 
+#[derive(Copy, Clone, Eq, PartialEq, Debug)]
 pub enum CardType {
     Trump,
     Color,
     RufColor,
 }
 
+#[derive(Debug)]
 pub struct CardInGame {
     card: Card,
     card_type: CardType,
+}
+
+impl PartialEq<Self> for CardInGame {
+    fn eq(&self, other: &Self) -> bool {
+        self.card == other.card && self.card_type == other.card_type
+    }
 }
 
 impl CardInGame {
@@ -109,5 +118,9 @@ impl CardInGame {
 
     pub fn get_card(&self) -> Card {
         self.card.clone()
+    }
+
+    pub fn get_card_type(&self) -> CardType {
+        self.card_type
     }
 }
